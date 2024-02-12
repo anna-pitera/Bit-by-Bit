@@ -3,18 +3,19 @@ let gameState = {}
 const config = {
     type: Phaser.AUTO,
     width: 450,
-    height: 600,
-    backgroundColor: "#5f2a55",
+    height: 450,
     scene: {
         create
     }
 }
 
 function preload () {
-
+    this.load.image("characterboxoutline", "./assets/ui/characterboxoutline.png");
 }
 
 function create () {
+    this.add.image(0, 0, "characterboxoutline");
+
 
 }
 
