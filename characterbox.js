@@ -6,11 +6,15 @@ const config = {
     height: 450,
     scene: {
         create
-    }
+    },
+    scale: {autoCenter: Phaser.Scale.CENTER_BOTH}
 }
 
 function preload () {
     this.load.image("characterboxoutline", "./assets/ui/characterboxoutline.png");
+    this.game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    this.game.scale.pageAlignHorizontally = true;
+    this.game.scale.pageAlignVertically = true;
 }
 
 function create () {
