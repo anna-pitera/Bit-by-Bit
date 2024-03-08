@@ -1,12 +1,12 @@
 @font-face {
   font-family: "m5x7";
-  src: url("./fonts/m5x7.ttf");
+  src: url("./static/fonts/m5x7.ttf");
 }
 
 body {
   font-family: "m5x7";
   font-size: 40px;
-  
+
 }
 
 input[type="text"] {
