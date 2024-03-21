@@ -1,22 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<title>Bit by Bit</title>
+<link rel="stylesheet" href="{% static '../static/style.css' %}">
+{%endblock%}
 
-<head>
-    <meta charset="utf-8">
-    <title>Bit by Bit</title>
-    <!-- PythonAnywhere -->
-    <link rel="stylesheet" href="./static/style.css">
-    <!-- VS Code -->
-    <link rel="stylesheet" href="../static/style.css">
-</head>
-
-<body>
-    <script type="text/javascript" src="./static/phaser.min.js"></script>
-
-    <h4>What is your name?</h4>
-    <div>
-        <input type="text" class="pixel-corners pixel-corners--wrapper" size="20">
-    </div>
-</body>
-
-</html>
+{% block content %}
+{%endblock%}
