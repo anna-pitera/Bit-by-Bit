@@ -8,7 +8,7 @@
     <!-- VS Code -->
     <link rel="stylesheet" href="{% static '../static/style.css' %}">
     {% block head %}
-    {%endblock%}
+    {% endblock %}
 </head>
 {% block content %}
 <body>
@@ -17,5 +17,18 @@
         <input type="text" class="pixel-corners pixel-corners--wrapper" size="20">
     </div>
 </body>
-{%endblock%}
+<h1>To Do</h1>
+<form>
+    {{ form.text }}
+    {% csrf_token %}
+    <input type="Submit" value="Add task">
+</form>
+{% for task in tasks %}
+<div>
+    <ul>
+        <li>{{ tasks }}</li>
+    </ul>
+</div>
+{% endfor %}
+{% endblock %}
 </html>
