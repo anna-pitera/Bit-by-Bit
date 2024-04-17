@@ -3,32 +3,28 @@
 
 <head>
     <title>Bit by Bit</title>
-    <!-- PythonAnywhere
-        <link rel="stylesheet" href="./static/style.css"> -->
-    <!-- VS Code -->
-    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+    <link rel="stylesheet" href="{% static './style.css' %}">
     {% block head %}
     {% endblock %}
 </head>
-{% block content %}
 <body>
-    <div>
-        <h4>What is your name?</h4>
-        <input type="text" class="pixel-corners pixel-corners--wrapper" size="20">
+    {% block content %}
+    <div class='split left'>
+        <h1>To Do</h1>
+        <form class="pixel-corners pixel-corners--wrapper" method="POST">
+            {{ form.text }}
+            {% csrf_token %}
+        </form>
+        {% comment %} {% for task in tasks %} {% endcomment %}
+        <ul>
+            <li>{{ task }}</li>
+        </ul>
+        {% comment %} {% endfor %} {% endcomment %}
     </div>
+    <div class='split right'>
+        <h1>Character Box Here</h1>
+    </div>
+    <!--Character Box Column (column b)-->
 </body>
-<h1>To Do</h1>
-<form>
-    {{ form.text }}
-    {% csrf_token %}
-    <input type="Submit" value="Add task">
-</form>
-{% for task in tasks %}
-<div>
-    <ul>
-        <li>{{ tasks }}</li>
-    </ul>
-</div>
-{% endfor %}
 {% endblock %}
 </html>
