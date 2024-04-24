@@ -1,0 +1,38 @@
+{% load static %}
+{% block head %}
+<head>
+    <title>Bit by Bit</title>
+    <link rel="stylesheet" href="{% static './nes.css/css/nes.min.css' %}">
+    <link rel="stylesheet" href="{% static './style.css' %}">
+    <style>
+        html, body, pre, code, kbd, samp {
+            font-family: "Press Start 2P";
+            src: url("./2p.ttf");
+        }
+    </style>
+</head>
+
+<body>
+    <div class='split left'>
+        <div class="topnav">
+            <div class="topnav-left">
+              <a href="#shop">Shop</a>
+            </div>
+            <div class="topnav-centered">
+              <a href="#tasks">Tasks</a>
+            </div>
+            <div class="topnav-right">
+              <a href="#habits">Habits</a>
+            </div>
+        </div>
+
+        <div class="nes-field a">
+            <label for="name_field">Your name</label>
+            <input type="text" id="name_field" class="nes-input">
+        </div>
+    </div>
+    <div class='split right'>
+        <h1>Character Box Here</h1>
+    </div>
+</body>
+{%endblock%}

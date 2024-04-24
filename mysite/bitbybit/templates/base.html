@@ -15,11 +15,11 @@
             {{ form.text }}
             {% csrf_token %}
         </form>
-        {% comment %} {% for task in tasks %} {% endcomment %}
+        {% for task in tasks %}
         <ul>
             <li>{{ task }}</li>
         </ul>
-        {% comment %} {% endfor %} {% endcomment %}
+        {% endfor %}
     </div>
     <div class='split right'>
         <h1>Character Box Here</h1>

@@ -9774,3 +9774,4 @@ mysite/static/node_modules/phaser/types/SpineFile.d.ts
 mysite/static/node_modules/phaser/types/SpineGameObject.d.ts
 mysite/static/node_modules/phaser/types/SpinePlugin.d.ts
 mysite/mysite/settings.py
+vscodemysite/home/settings.py
