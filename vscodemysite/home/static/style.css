@@ -1,7 +1,11 @@
 h1 { text-align: center }
 
+.input {
+  width: 40em;
+}
+
 .topnav {
-  background-color: #d6d6e0;
+  background-color: lightgray;
   overflow: hidden;
   font-size: 25px;
   display: flex;

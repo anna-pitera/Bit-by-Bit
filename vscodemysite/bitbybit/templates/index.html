@@ -13,8 +13,9 @@
 </head>
 
 <body>
+    {# Left side of split screen #}
     <div class='split left'>
-        <div class="topnav pixel-corners pixel-corners--wrapper">
+        <div class="topnav pixel-corners pixel-corners--wrapper nes-btn">
             <div class="topnav-left">
                 <a href="#shop">Shop</a>
             </div>
@@ -25,11 +26,14 @@
                 <a href="#habits">Habits</a>
             </div>
         </div>
+        <h1 class="titles nes-text">Create a task:</h1>
         <div class="nes-field a">
-            <label for="name_field">Enter Task:</label>
-            <input type="text" id="name_field" class="nes-input pixel-corners pixel-corners--wrapper">
+            <input type="text" id="name_field" class="input nes-input pixel-corners" placeholder="Enter task" required>
+            <textarea id="name_field" class="input nes-input pixel-corners" placeholder="Enter task description (optional)" rows="5" cols="30"></textarea>
         </div>
     </div>
+
+    {# Right side of split screen #}
     <div class='split right'>
         <h1>Character Box Here</h1>
     </div>
