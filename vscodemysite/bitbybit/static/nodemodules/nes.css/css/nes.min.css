@@ -1297,7 +1297,7 @@ input[type=radio] {
   border:none
 }
 .nes-table-responsive {
-  max-width:46.25em;
+  width: 45.25em;
   overflow: hidden;
   justify-content: center;
   left: 0.25em;
