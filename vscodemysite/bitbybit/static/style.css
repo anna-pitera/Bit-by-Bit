@@ -1,5 +1,12 @@
 h1 { text-align: center }
 
+.tables {
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+  flex-grow: 1;
+}
+
 .titles {
   font-size: 20px;
   text-align: left;
@@ -24,12 +31,14 @@ h1 { text-align: center }
 .topnav a {
   color: #000000;
   text-align: center;
-  padding: 2em 2.25em;
+  display: block; /* Make the anchor element a block-level element */
+  width: 9.5em; /* Set a fixed width for each item */
+  box-sizing: border-box; /* Include padding and border in the element's total width */
   text-decoration: none;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: darkgray;
   color: black;
 }
 
@@ -37,13 +46,13 @@ h1 { text-align: center }
   display: inline-block;
   justify-content: center;
   align-items: center; /* Align items vertically */
-  flex-grow: 1; /* Take up remaining space */
+  flex: 1; /* Take up remaining space */
 }
 
 .topnav-right {
   font-size: 25px;
   align-items: center;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .split {
