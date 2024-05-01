@@ -29,11 +29,12 @@ h1 { text-align: center }
 }
 
 .topnav a {
-  color: #000000;
+  color: black;
+  padding: 0.25em;
   text-align: center;
   display: block; /* Make the anchor element a block-level element */
   width: 9.5em; /* Set a fixed width for each item */
-  box-sizing: border-box; /* Include padding and border in the element's total width */
+  
   text-decoration: none;
 }
 

@@ -796,7 +796,6 @@ input[type=radio] {
   border-image-outset:2;
   position:relative;
   display:inline-block;
-  padding:6px 8px;
   margin:4px;
   text-align:center;
   vertical-align:middle;
@@ -810,7 +809,7 @@ input[type=radio] {
 }
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution:0.001dpcm) {
   .nes-btn {
-    border-image-repeat:space
+    border-image-repeat:space;
   }
 }
 @supports (-moz-appearance:meterbar) {
