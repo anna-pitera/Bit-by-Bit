@@ -1,5 +1,10 @@
 h1 { text-align: center }
 
+.submit:hover {
+  background-color: darkgray;
+  color: black;
+}
+
 .tables {
   align-items: center;
   display: inline-block;

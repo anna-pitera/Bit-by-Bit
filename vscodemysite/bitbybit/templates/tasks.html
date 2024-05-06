@@ -28,27 +28,25 @@
         </div>
         <h1 class="titles nes-text">Create a task:</h1>
         <div class="nes-field a">
-            <textarea  id="name_field" class="input nes-input pixel-corners" placeholder="Enter task" required rows="2"></textarea>
-            <textarea id="name_field" class="input nes-input pixel-corners" placeholder="Enter task description (optional)" rows="5" cols="30"></textarea>
+            <form action="/" method="POST">
+                {% csrf_token %}
+                <textarea id="title" name="title" class="input nes-input pixel-corners" placeholder="Enter task" required rows="2"></textarea>
+                <textarea id="desc" name="desc" class="input nes-input pixel-corners" placeholder="Enter task description (optional)" rows="5" cols="30"></textarea>
+                <button type="submit" class="submit nes-btn pixel-corners">Submit</button>
+            </form>
         </div>
         <h1 class="titles nes-text">Your Tasks:</h1>
         <div class="pixel-corners nes-table-responsive">
             <table class="nes-table is-centered tables" style='{}'>
-                <thead>
-                    <tr>
-                        <th>test</th>
-                        <th>test</th>
-                        <th>test</th>
-                        <th>test</th>
-                    </tr>
-                </thead>
                 <tbody>
+                    {% for task in tasks %}
                     <tr>
-                        <td>test</td>
+                        <td>{{task.task_title}}</td>
                     </tr>
                     <tr>
-                        <td>test</td>
+                        <td>{{task.task_desc}}</td>
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
