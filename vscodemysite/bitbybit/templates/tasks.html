@@ -41,10 +41,12 @@
                 <tbody>
                     {% for task in tasks %}
                     <tr>
-                        <td>{{task.task_title}}</td>
-                    </tr>
-                    <tr>
-                        <td>{{task.task_desc}}</td>
+                        <td>
+                            <button type="submit" class="complete-btn nes-btn pixel-corners"></button>
+                            <u class="task-titles">{{ forloop.counter }}. {{task.task_title}}</u>
+                            <br>
+                            <text class="task-descs">{{task.task_desc}}</text>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

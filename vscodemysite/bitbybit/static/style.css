@@ -5,11 +5,32 @@ h1 { text-align: center }
   color: black;
 }
 
+.complete-btn {
+  background-color: rgb(214, 100, 100);
+  color: black;
+}
+
+.task-titles {
+  padding-right: 0%;
+}
+
+.task-descs {
+  color: rgb(115, 120, 120);
+  padding-right: 0%;
+}
+
+br {
+  display: block;
+  margin-top: 10px;
+  content: "";
+}
+
 .tables {
   align-items: center;
-  display: inline-block;
+  display: inline-table;
   justify-content: center;
   flex-grow: 1;
+  width: 100%;
 }
 
 .titles {
