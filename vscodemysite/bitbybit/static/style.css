@@ -1,13 +1,15 @@
 h1 { text-align: center }
 
-.submit:hover {
+.submit-btn:hover {
   background-color: darkgray;
   color: black;
 }
 
 .complete-btn {
-  background-color: rgb(214, 100, 100);
+  background-color: lightgray;
   color: black;
+  width: 1.75em;
+  height: 1.75em;
 }
 
 .task-titles {

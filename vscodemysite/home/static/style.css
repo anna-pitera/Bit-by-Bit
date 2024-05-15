@@ -1,10 +1,38 @@
 h1 { text-align: center }
 
+.submit:hover {
+  background-color: darkgray;
+  color: black;
+}
+
+.complete-btn {
+  background-color: lightgray;
+  color: black;
+  width: 1.75em;
+  height: 1.75em;
+}
+
+.task-titles {
+  padding-right: 0%;
+}
+
+.task-descs {
+  color: rgb(115, 120, 120);
+  padding-right: 0%;
+}
+
+br {
+  display: block;
+  margin-top: 10px;
+  content: "";
+}
+
 .tables {
   align-items: center;
-  display: inline-block;
+  display: inline-table;
   justify-content: center;
   flex-grow: 1;
+  width: 100%;
 }
 
 .titles {
@@ -15,42 +43,45 @@ h1 { text-align: center }
 }
 
 .input {
-  width: 46.25em;
+  width: 45.25em;
   resize: none;
 }
 
 .topnav {
+  background-color: lightgray;
   overflow: hidden;
   font-size: 25px;
   display: flex;
   justify-content: space-between; /* Adjust space between items */
   align-items: center;
-  color: lightgray;
 }
 
 .topnav a {
-  color: #000000;
+  color: black;
+  padding: 0.25em;
   text-align: center;
+  display: block; /* Make the anchor element a block-level element */
+  width: 9.5em; /* Set a fixed width for each item */
+  
   text-decoration: none;
 }
 
-
 .topnav a:hover {
   background-color: darkgray;
-  width: 100%;
+  color: black;
 }
 
 .topnav-centered {
   display: inline-block;
   justify-content: center;
   align-items: center; /* Align items vertically */
-  flex-grow: 1; /* Take up remaining space */
+  flex: 1; /* Take up remaining space */
 }
 
 .topnav-right {
   font-size: 25px;
   align-items: center;
-  flex-grow: 1;
+  flex: 1;
 }
 
 .split {

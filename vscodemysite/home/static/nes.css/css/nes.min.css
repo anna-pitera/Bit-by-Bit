@@ -796,7 +796,6 @@ input[type=radio] {
   border-image-outset:2;
   position:relative;
   display:inline-block;
-  padding:6px 8px;
   margin:4px;
   text-align:center;
   vertical-align:middle;
@@ -810,7 +809,7 @@ input[type=radio] {
 }
 @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution:0.001dpcm) {
   .nes-btn {
-    border-image-repeat:space
+    border-image-repeat:space;
   }
 }
 @supports (-moz-appearance:meterbar) {
@@ -825,20 +824,18 @@ input[type=radio] {
   bottom:-4px;
   left:-4px;
   content:"";
-  box-shadow:inset -4px -4px #adafbc
 }
 .nes-btn:hover {
   text-decoration:none;
-  background-color:#e7e7e7
 }
 .nes-btn:hover::after {
-  box-shadow:inset -6px -6px #adafbc
+  color:transparent;
 }
 .nes-btn:focus {
-  box-shadow:0 0 0 6px rgba(173,175,188,.3)
+  color:transparent;
 }
 .nes-btn:active:not(.is-disabled)::after {
-  box-shadow:inset 4px 4px #adafbc
+  color:transparent;
 }
 .nes-btn:focus {
   outline:0
@@ -1299,7 +1296,7 @@ input[type=radio] {
   border:none
 }
 .nes-table-responsive {
-  max-width:46.25em;
+  width: 45.25em;
   overflow: hidden;
   justify-content: center;
   left: 0.25em;

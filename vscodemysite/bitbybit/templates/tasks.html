@@ -32,7 +32,7 @@
                 {% csrf_token %}
                 <textarea id="title" name="title" class="input nes-input pixel-corners" placeholder="Enter task" required rows="2"></textarea>
                 <textarea id="desc" name="desc" class="input nes-input pixel-corners" placeholder="Enter task description (optional)" rows="5" cols="30"></textarea>
-                <button type="submit" class="submit nes-btn pixel-corners">Submit</button>
+                <button type="submit" name="create" class="submit-btn nes-btn pixel-corners">Submit</button>
             </form>
         </div>
         <h1 class="titles nes-text">Your Tasks:</h1>
@@ -42,10 +42,13 @@
                     {% for task in tasks %}
                     <tr>
                         <td>
-                            <button type="submit" class="complete-btn nes-btn pixel-corners"></button>
-                            <u class="task-titles">{{ forloop.counter }}. {{task.task_title}}</u>
-                            <br>
-                            <text class="task-descs">{{task.task_desc}}</text>
+                            <form action="{% url 'complete_task' task_index=task.task_index %}" method="POST" name="complete">
+                                {% csrf_token %}
+                                <button id="complete" name="complete" type="submit" class="complete-btn nes-btn pixel-corners"></button>
+                                <u class="task-titles">{{ task.task_index }}. {{task.task_title}}</u>
+                                <br>
+                                <text class="task-descs">{{task.task_desc}}</text>
+                            </form>
                         </td>
                     </tr>
                     {% endfor %}
