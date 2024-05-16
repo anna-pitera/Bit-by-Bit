@@ -1,4 +1,7 @@
 from django.db import models
+from django.conf import settings
+
+borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
 
 class Task(models.Model):
     task_index = models.IntegerField(default=1)
