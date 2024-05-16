@@ -1,7 +1,7 @@
 from django.db import models
 
 class Task(models.Model):
-    task_index = models.IntegerField(default=1, primary_key=True)
+    task_index = models.IntegerField(default=1)
     task_title = models.CharField(max_length=70, unique=True)
     task_desc = models.TextField()
     time = models.DateTimeField(auto_now_add=True, null=True)
