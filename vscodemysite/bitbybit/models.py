@@ -1,9 +1,9 @@
 from django.db import models
-from django.conf import settings
+from django.contrib.auth.models import User
 
-borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
 
 class Task(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     task_index = models.IntegerField(default=1)
     task_title = models.CharField(max_length=70, unique=True)
     task_desc = models.TextField()

@@ -28,7 +28,7 @@
         </div>
         <h1 class="titles nes-text">Create a task:</h1>
         <div class="nes-field a">
-            <form action="/" method="POST">
+            <form action="{% url 'create_task' %}" method="POST" name="create">
                 {% csrf_token %}
                 <textarea id="title" name="title" class="input nes-input pixel-corners" placeholder="Enter task" required rows="2"></textarea>
                 <textarea id="desc" name="desc" class="input nes-input pixel-corners" placeholder="Enter task description (optional)" rows="5" cols="30"></textarea>
