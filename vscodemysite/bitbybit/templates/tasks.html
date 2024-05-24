@@ -1,5 +1,6 @@
 {% load static %}
-{% block head %}
+{% block page %}
+{% if user.is_authenticated %}
 <head>
     <title>Bit by Bit</title>
     <link rel="stylesheet" href="{% static './nes.css/css/nes.min.css' %}">
@@ -55,6 +56,12 @@
                 </tbody>
             </table>
         </div>
+        {% if user.is_authenticated %}
+        <form action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Log out" class="submit-btn nes-btn pixel-corners">
+        </form>
+        {% endif %}
     </div>
     
     {# Right side of split screen #}
@@ -62,4 +69,6 @@
         <h1>Character Box Here</h1>
     </div>
 </body>
-{%endblock%}
+{% else %}
+{% endif %}
+{% endblock %}

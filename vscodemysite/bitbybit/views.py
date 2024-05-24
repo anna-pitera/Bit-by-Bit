@@ -6,11 +6,11 @@ from bitbybit.models import Task
 @login_required
 def task_list(request):
     print(request.user.is_authenticated)
-    if request.user.is_authenticated:
+    if request.user.is_authenticated == True:
         tasks = Task.objects.filter(user=request.user)
-        return render(request, 'tasks.html', {'tasks': tasks})
-    else:
-        return render(request, 'login.html')
+        return render(request, "tasks.html", {"tasks": tasks})
+    elif request.user.is_authenticated == False:
+        return render(request, "login.html")
 
 @login_required
 def create_task(request):
