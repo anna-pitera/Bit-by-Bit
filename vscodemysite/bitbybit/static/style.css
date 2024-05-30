@@ -1,5 +1,16 @@
 h1 { text-align: center }
 
+.bottom-screen {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .signup-btn {
   display: block;
   position: absolute;
