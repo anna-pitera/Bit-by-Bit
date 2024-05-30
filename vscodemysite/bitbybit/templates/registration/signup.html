@@ -1,0 +1,28 @@
+{% load static %}
+{% block head %}
+<head>
+    <title>Bit by Bit</title>
+    <link rel="stylesheet" href="{% static './nes.css/css/nes.min.css' %}">
+    <link rel="stylesheet" href="{% static './style.css' %}">
+    <style>
+        html, body, pre, code, kbd, samp {
+            font-family: "Press Start 2P";
+            src: url("./2p.ttf");
+        }
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="{% url 'signup' %}">
+        <div class="center-screen">
+            {% csrf_token %}
+            {{ form.username }}
+            {{ form.password1 }}
+            {{ form.password2 }}
+        </div>
+        <button type="submit" class="signup-btn submit-btn nes-btn pixel-corners">Sign up!</button>
+    </form>
+</body>
+
+
+{%endblock%}
