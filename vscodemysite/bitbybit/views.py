@@ -20,10 +20,8 @@ def task_list(request):
 @login_required
 def create_task(request):
     print(request.method)
-    print("help")
     if request.method == "POST":
         tasks = Task.objects.filter(user=request.user)
-        print("sad")
         title = request.POST.get("title")
         desc = request.POST.get("desc")
         user = request.user
@@ -33,12 +31,12 @@ def create_task(request):
     return render(request, "tasks.html", {'tasks': tasks})
 
 @login_required
-def complete_task(request, task_index):
-    all_tasks = Task.objects.all()
-    task = get_object_or_404(Task, pk=task_index)
+def complete_task(request, task_id):
+    tasks = Task.objects.filter(user=request.user)
+    task = get_object_or_404(Task, id=task_id, user=request.user)
     task.is_complete = True
     task.save()
-    context = {"tasks": all_tasks}
+    context = {"tasks": tasks}
     print("task completed")
     return render(request, "tasks.html", context)
 
